@@ -1,0 +1,243 @@
+/*
+Detail
+=======================================
+Defines the styling for the Shopware 5 detail page elements.
+It contains the product actions, the product information such as pictures and details and the user ratings of the product.
+*/
+
+/* --- Allgemein --- */
+
+.product--details .product--actions .btn.contact-in-actions when (@layout_produktdetails=1) {
+	margin-top: 0px;
+}
+.product--details .product--actions .btn.contact-in-actions when (@layout_produktdetails=2) {
+	margin-top: 0px;
+}
+.product--details nav.product--actions:nth-of-type(1) {
+	margin-bottom: 0px;
+}
+
+
+/* --- Layout "boxed background color" --- */
+
+
+	.product--buybox {
+		background: @produktdetails_background_color;
+		padding: 30px 30px 0px;
+		margin-bottom: 20px !important;
+	}
+
+	.product--details .buybox--form {
+		width: 100%;
+		margin: 10px 0px 0px;
+	}
+
+	.configurator--variant .option--label {
+		background: @panel-bg;
+	}
+    @media screen and (max-width: 479px) {
+        .product--details .product--buybox {
+            width:calc(~"100% + 40px") !important;
+            margin-left: -20px !important;
+        }
+    }
+
+
+
+
+
+
+/* --- Layout "zentriert" --- */
+
+
+
+/* --- Produkt headline --- */
+
+.product--details .product--buybox h1 {
+	padding-top: 0;
+	margin-top: 0;
+}
+.product--details .product--buybox h1 when (@artikel_headline_position=1) {
+	margin: 0;
+}
+     
+@media screen and (min-width: 48em) {
+    .product--details .product--header .product--title {
+        width:calc(~"100% - " @supplier_logo_width);
+    }
+}
+
+
+/* --- Rating container --- */
+
+
+     .product--details .product--rating-container when (@artikel_headline_position=1) {
+        width:calc(~"100% - 5px - " @supplier_logo_width); /* -5px margin-left */
+        float: left;
+        .unitize-margin(5, 0, 5, 0);
+    }
+    .product--details .product--rating-container when not (@artikel_headline_position=1) {
+        width:calc(~"100% - " @supplier_logo_width);
+        float: left;
+    }
+
+.product--details .product--rating-link {
+    display: inline;
+}
+
+    .product--details .product--buybox .product--rating-container .product--rating {
+        .unitize(padding-bottom, 15);
+    }
+
+
+.product--details .product--rating-container.no-supplier-img {
+    width: 100% !important;
+}
+
+
+/* --- Hersteller-Logo --- */
+
+.product--details .product--supplier {
+	height: auto;
+	width: 100%;
+	max-width: @supplier_logo_width;
+}
+
+
+    .product--details .product--supplier when (@artikel_headline_position=1) {
+        .unitize-margin(5, 0, 5, 5);
+    }
+    .product--details .product--supplier when not (@artikel_headline_position=1) {
+	    float: right;
+    }
+    /*@media screen and (max-width: 767px) {
+        .product--details .product--supplier {
+            .unitize-margin(5, 0, 0, 0);
+        }
+    }*/
+
+.product--details .product--supplier .product--supplier-link {
+	height: 100%;
+}
+
+// .buybox--inner
+
+.product--details when (@artikel_headline_position=1) {
+    .buybox--inner {
+        .unitize(margin-top, 10);
+        //clear: both;
+    }
+}
+
+/* --- Staffelpreise --- */
+
+// table th color fix
+.product--details .block-prices--container .block-prices--table th {
+	color: @table-header-color;
+}
+
+// table fix
+.product--details .block-prices--container .block-prices--table {
+    width: auto;
+	margin-bottom: -10px;
+}
+.product--details .block-prices--container .block-prices--table th {
+    padding: 4px 10px;
+    line-height: 1.3;
+}
+.product--details .block-prices--container .block-prices--table td {
+    padding: 0px 10px;
+    line-height: 1.5;
+	border: none !important;
+}
+
+
+
+/* --- Grundpreis --- */
+
+.product--details {
+    .product--buybox {
+        .product--price {
+            .unitize(line-height, 24);
+        }
+    }
+}
+
+
+/* --- .product--base-info --- */
+.base-info--entry  {
+    display: table;
+    width: 100%;
+}
+
+@media (max-width: 1000px) {
+	.product--details .product--base-info {
+		margin-bottom: 20px;
+	}
+}
+
+.product--details .product--base-info .entry--label when not (@produktdetails_zentriert=1) { 
+    display: table-cell; 
+    width: @tw-product-base-label-width;
+}
+.product--details .product--base-info .entry--label when (@produktdetails_zentriert=1) { 
+	display: inline; 
+	width: inherit; 
+}
+
+.product--details .product--base-info .entry--content when not (@produktdetails_zentriert=1) {
+    display: table-cell;
+    width: @tw-product-base-label-content;
+}
+.product--details .product--base-info .entry--content when (@produktdetails_zentriert=1) { 
+	display: inline; 
+	width: inherit ; 
+}
+
+// Artikelnummer ausblenden
+.product--details .base-info--entry.entry--sku when not (@artikel_show_artikelnummer=1) {
+	display: none !important;
+}
+
+// .product--details .product--configurator .reset--configuration
+.btn.reset--configuration when not (@artikel_variantenauswahl_reset=1) {
+	display: none !important;
+}
+
+// Tabelle Grundpreisberechnung 
+.product--details .block-prices--container {
+	.unitize(margin-bottom, 25);
+}
+
+
+/* --- Share buttons ---*/
+
+/* small/compact */
+.share--buttons [class^="icon-"] when (@share_buttons_compact=1) {
+    width: 32px !important;
+    height: 32px !important;
+    margin: 0 2px !important;
+}
+
+
+// Product notification
+.product--notification {
+    .privacy-information {
+        clear: both;
+    }
+}
+
+
+/* --- Fixes ---*/
+
+.is--ctl-detail .product--buybox .alert,
+.is--ctl-detail .product--buybox .custom_announcment,
+.is--ctl-detail .product--buybox .delivery-shippingfree {
+    clear: both;
+}
+
+.product--details {
+    .content--title {
+        .unitize(line-height,22);
+    }
+}

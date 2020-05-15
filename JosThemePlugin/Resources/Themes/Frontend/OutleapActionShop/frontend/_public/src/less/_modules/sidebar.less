@@ -1,0 +1,123 @@
+.filter-panel{
+    background-image:none;
+}
+
+.sidebar-main{
+    .sidebar--categories-wrapper{
+        background:#ffffff;
+    }
+
+    .off-canvas{
+        overflow:scroll;
+    }
+}
+
+.listing--sidebar{
+    overflow:visible;
+}
+
+.offcanvas--overlay {
+    width: 100%;
+    top: 2.625rem;
+    background: #f5f5f8;
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: auto;
+    left: 0;
+    padding: 0;
+    z-index: 1200;
+    bottom: 0;
+}
+
+.navigation--headline {
+    font-size: 1rem;
+    padding: 0.625rem 0.625rem 0.625rem 0.625rem;
+    height: 2.625rem;
+    font-weight: 700;
+    display: block;
+    width: 100%;
+}
+
+.sidebar--navigation .navigation--entry {
+    position: relative;
+    padding-left: 10px;
+}
+.off-canvas .link--go-main {
+    font-size: 1rem;
+    padding: 0.625rem 0.625rem 0.625rem 21px;
+    height: 2.625rem;
+    font-weight: 700;
+    display: block;
+    width: 100%;
+}
+
+.offcanvas--overlay .overlay--category {
+    margin: 10px 10px 10px 21px;
+    line-height: 1.625rem;
+}
+
+/* 30em | 480px | Phone Landscape*/
+@media screen and (min-width: @phoneLandscapeViewportWidth){
+
+}
+
+/* 48em | 768px | Tablet*/
+@media screen and (min-width: @tabletViewportWidth){
+
+    .sidebar-main{
+        .off-canvas{
+            overflow:visible;
+        }
+    }
+    
+
+    .listing--sidebar{
+        .sidebar--categories-wrapper{
+            background:none;
+            .sidebar--navigation{
+                .unitize(padding-top,10);
+                .unitize(padding-bottom,10);
+            }
+        }
+
+        .sidebar-filter{
+            .action--filter-options{
+                border:1px solid @border-color;
+                //.material-design-box-shadow();
+            }
+        }
+    }
+
+    .sidebar-main{
+
+        .sidebar--categories-wrapper{
+
+            //.material-design-box-shadow();
+
+            .showSidebarCategories() when not (@showSidebarCategories = 1)
+            {
+                display:none!important;
+            }
+            .showSidebarCategories();
+        }
+
+    }
+
+
+}
+
+/* 64em | 1024px | Tablet Landscape*/
+@media screen and (min-width: @tabletLandscapeViewportWidth){
+
+}
+
+/* 78.75em | Desktop*/
+@media screen and (min-width: @desktopViewportWidth){
+
+    .sidebar-main{
+        .unitize(padding-top,10);
+    }
+
+
+    
+}

@@ -1,0 +1,422 @@
+/*
+ *  Copyright (C) Thomas Neef | neefit.de - All Rights Reserved
+ * @author  Thomas Neef
+ * @Modul  Projects
+ * @Class  confirm.less
+ * @date  13.05.20, 21:20
+ */
+.alert.is--error {
+  color: @highlight-error;
+  background: transparent;
+  border: 1px solid @highlight-error;
+}
+
+.confirm--content{
+   padding-top: 0;
+  .panel.has--border {
+    border: 1px solid #eee;
+    margin: 20px 0;
+    padding: 0 20px;
+  }
+  .panel--title, .panel .panel--title,.panel--title.primary{
+    border: 0 none;
+    font-size: 20px;
+    border-bottom: 1px solid #eee;
+  }
+  .panel--body.is--wide {
+    padding: 1.25rem 0 5px 0;
+  }
+
+  /* ADRESSEN
+  .information--panel-wrapper{
+    .information--panel-item.information--panel-address {
+      .panel--actions.is--wide {
+        padding: 1.25rem 0 1.25rem 0;
+      }
+    }
+  }
+  */
+}
+
+.jos-adress-container-flex {
+  .jos-adress-container-flex-billing-adress{
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  .jos-adress-container-flex-billing-adress-action {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    padding: 15px 0;
+
+    .btn {
+      border-radius: 0;
+      background-image: none;
+      background: transparent;
+      color: #000;
+      border: 1px solid #000000;
+      font-weight: 400;
+      text-align: center;
+      margin-right: 0;
+      width: 100%;
+
+    }
+  }
+
+
+}
+
+
+
+
+
+
+.jos-adressshipping-container-flex {
+    .jos-billing-box-row{
+      .jos-billing-box-row-billing-adress{
+        padding: 10px 0;
+      }
+      .jos-billing-box-row-billing-action{
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        padding: 10px 0;
+        .btn {
+          border-radius: 0;
+          background-image: none;
+          background: transparent;
+          color: #000;
+          border: 1px solid #000000;
+          font-weight: 400;
+          text-align: center;
+          margin-right: 0;
+          margin-top: 5px;
+          width: 100%;
+        }
+      }
+    }
+
+  .jos-shipping-box-row{
+    .jos-billing-box-row-shipping-adress{
+      padding: 10px 0;
+    }
+    .jos-billing-box-row-shipping-action{
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      padding: 10px 0;
+      .btn {
+        border-radius: 0;
+        background-image: none;
+        background: transparent;
+        color: #000;
+        border: 1px solid #000000;
+        font-weight: 400;
+        text-align: center;
+        margin-right: 0;
+        margin-top: 5px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.jos-pay-container-flex {
+  .jos-pay-container-flex-text{
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .jos-pay-container-flex-action {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    padding: 10px 0;
+    .btn {
+      border-radius: 0;
+      background-image: none;
+      background: transparent;
+      color: #000;
+      border: 1px solid #000000;
+      font-weight: 400;
+      text-align: center;
+      margin-right: 0;
+      margin-top: 5px;
+      width: 100%;
+    }
+  }
+
+
+
+}
+
+
+.product--table{
+  .panel, .panel.has--border{
+    border: 0 none;
+    padding: 0;
+  }
+}
+
+
+
+
+/* 30em | 480px | Phone Landscape*/
+@media screen and (min-width: @phoneLandscapeViewportWidth) {
+
+
+}
+
+/* 48em | 768px | Tablet*/
+@media screen and (min-width: @tabletViewportWidth){
+
+
+
+}
+
+
+
+/* 64em | 1024px | Tablet Landscape*/
+@media screen and (min-width: @tabletLandscapeViewportWidth){
+
+  .product--table{
+     .panel, .panel.has--border{
+       border: 0 none;
+       padding: 0;
+     }
+  }
+
+  .jos-pay-container-flex {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    width: 100%;
+
+    .jos-pay-container-flex-text{
+      width: 100%;
+      height: 143px;
+      min-height: 143px;
+      padding: 15px 0;
+    }
+
+    .jos-pay-container-flex-action {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-template-rows: 1fr;
+      gap: 10px 10px;
+      grid-template-areas: ". . .";
+      padding: 15px 0;
+
+      .btn {
+        border-radius: 0;
+        background-image: none;
+        background: transparent;
+        color: #000;
+        border: 1px solid #000000;
+        font-weight: 400;
+        text-align: center;
+        margin-right: 15px;
+      }
+    }
+  }
+
+  .jos-adress-container-flex {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    width: 100%;
+
+    .jos-adress-container-flex-billing-adress{
+      width: 100%;
+      height: 140px;
+      min-height: 140px;
+      padding: 15px 0;
+    }
+
+    .jos-adress-container-flex-billing-adress-action {
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      padding: 15px 0;
+
+      .btn {
+        border-radius: 0;
+        background-image: none;
+        background: transparent;
+        color: #000;
+        border: 1px solid #000000;
+        font-weight: 400;
+        text-align: center;
+        margin-right: 15px;
+      }
+    }
+  }
+
+
+  /* Billing/ Shipping diff */
+  .jos-adressshipping-container-flex {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    width: 100%;
+
+
+    .jos-billing-box-row{
+      width: 50%;
+      padding: 0 20px 15px 0;
+
+      .jos-billing-box-row-billing-adress{
+        width: 100%;
+        height: 140px;
+        min-height: 140px;
+        padding: 15px 0;
+      }
+
+      .jos-billing-box-row-billing-action{
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        padding: 15px 0;
+
+        .address--actions-change{
+          margin-right: 5px;
+        }
+
+        .btn {
+          border-radius: 0;
+          background-image: none;
+          background: transparent;
+          color: #000;
+          border: 1px solid #000000;
+          font-weight: 400;
+          text-align: center;
+        }
+      }
+    }
+
+    .jos-shipping-box-row{
+      width: 50%;
+      padding: 0 0 15px 0;
+
+      .jos-billing-box-row-shipping-adress{
+        width: 100%;
+        height: 140px;
+        min-height: 140px;
+        padding: 15px 0;
+      }
+
+      .jos-billing-box-row-shipping-action{
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        padding: 15px 0;
+
+
+        .btn {
+          border-radius: 0;
+          background-image: none;
+          background: transparent;
+          color: #000;
+          border: 1px solid #000000;
+          font-weight: 400;
+          text-align: center;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+
+
+
+}
+
+
+

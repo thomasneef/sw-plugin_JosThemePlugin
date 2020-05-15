@@ -1,0 +1,48 @@
+.content--breadcrumb{
+
+    .unitize(font-size,12);
+    border:none;
+
+    .is--active .breadcrumb--link{
+        color:@brand-secondary;
+    }
+    
+    .breadcrumb--link, .breadcrumb--separator{
+        .unitize(line-height,10);
+        .unitize(padding-top,10);
+        .unitize(padding-bottom,10);
+    }
+
+    .breadcrumb--link i.fa-home{
+        .unitize(margin-top,-5);
+    }
+
+}
+
+
+/* 30em | 480px | Phone Landscape*/
+@media screen and (min-width: @phoneLandscapeViewportWidth){
+
+}
+
+/* 48em | 768px | Tablet*/
+@media screen and (min-width: @tabletViewportWidth){
+
+}
+
+/* 64em | 1024px | Tablet Landscape*/
+@media screen and (min-width: @tabletLandscapeViewportWidth){
+
+}
+
+/* 78.75em | Desktop*/
+@media screen and (min-width: @desktopViewportWidth){
+    .content--breadcrumb {
+        padding: 0;
+        .unitize(padding-left,12);
+    }
+
+    .content--breadcrumb > ul > li:first-child a{
+        padding-left:0;
+    }  
+}

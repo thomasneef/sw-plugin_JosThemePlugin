@@ -1,0 +1,56 @@
+/*
+ThemeWare Scroll-Top button
+====================================
+The `scroll-top.less` file contains the `Scroll-Top button` styles of ThemeWare.
+*/
+
+#scrolltopbutton {
+	font-size: 12px;
+
+	position: fixed;
+	z-index: 5001;
+	right: @scrolltop_button_margin_right;
+	bottom: @scrolltop_button_margin_bottom;
+
+	display: none;
+
+	width: 44px;
+	height: 44px;
+	padding-top: 13px;
+
+	cursor: pointer;
+	text-align: center;
+
+	color: @scrolltop_button_iconfarbe;
+	background: @scrolltop_button_hintergrundfarbe;
+
+	.border-radius(@border_radius) !important;
+
+	&:hover {
+		opacity: .8;
+
+		-ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)';
+		filter: alpha(opacity=80);
+		-moz-opacity: .8;
+		-khtml-opacity: .8;
+	}
+}
+
+@media (min-width:1025px) {
+	#scrolltopbutton when not (@scrolltop_button=1) {
+		display: none !important;
+		visibility: hidden !important;
+	}
+}
+@media (min-width:768px) and (max-width:1024px) {
+	#scrolltopbutton when not (@scrolltop_button_tabletViewport=1) {
+		display: none !important;
+		visibility: hidden !important;
+	}
+}
+@media (max-width:767px) {
+	#scrolltopbutton when not (@scrolltop_button_phoneViewport=1) {
+		display: none !important;
+		visibility: hidden !important;
+	}
+}

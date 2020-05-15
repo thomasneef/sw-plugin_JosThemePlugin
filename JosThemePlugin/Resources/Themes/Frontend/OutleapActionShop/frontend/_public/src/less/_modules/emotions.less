@@ -1,0 +1,96 @@
+.emotion--wrapper{
+
+    .unitize(max-width,1260);
+
+    .emotion--container{
+        background: @body-bg;
+
+        .product-slider {
+            border: 0 none !important;
+            border-top: 0 none;
+        }
+
+
+    }
+    
+}
+
+
+.emotion--product-slider .box--emotion .product--title {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    white-space: normal;
+}
+
+.emotion--product-slider .box--emotion .product--price .price--default {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    white-space: normal;
+}
+
+.emotion--mode-rows .emotion--manufacturer {
+    height: 160px;
+}
+
+.manufacturer--slider .product-slider--container .product-slider--item > a > img {
+    max-width: 150px;
+    max-height: 60px;
+    width: auto;
+    height: auto;
+    filter: grayscale(100%);
+    opacity: .8;
+}
+
+.emotion--product-slider .product-slider--content {
+    padding: 0.625rem 0 0.625rem 0;
+}
+
+.product-slider--arrow.arrow--next,
+.product-slider--arrow.arrow--next {
+    right: -12px;
+}
+.emotion--manufacturer .manufacturer--slider .arrow--next,
+.emotion--manufacturer .manufacturer--slider .arrow--next {
+    right: -18px;
+}
+
+
+/* 30em | 480px | Phone Landscape*/
+@media screen and (min-width: @phoneLandscapeViewportWidth){
+    .emotion--product-slider .product-slider--content {
+        padding: 0.625rem 0 0.625rem 0;
+    }
+
+    .product-slider--arrow.arrow--next,
+    .product-slider--arrow.arrow--next {
+        right: -12px;
+    }
+    .emotion--manufacturer .manufacturer--slider .arrow--next,
+    .emotion--manufacturer .manufacturer--slider .arrow--next {
+        right: -18px;
+    }
+
+
+}
+
+
+
+
+/* 48em | 768px | Tablet*/
+@media screen and (min-width: @tabletViewportWidth) {
+    .emotion--product-slider .product-slider--content {
+        padding: 0.625rem 0 0.625rem 0;
+    }
+
+    .product-slider--arrow.arrow--next,
+    .product-slider--arrow.arrow--next {
+        right: -12px;
+    }
+    .emotion--manufacturer .manufacturer--slider .arrow--next,
+    .emotion--manufacturer .manufacturer--slider .arrow--next {
+        right: -32px;
+    }
+
+}
+
+

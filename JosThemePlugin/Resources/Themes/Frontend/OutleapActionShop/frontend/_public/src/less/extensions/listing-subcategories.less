@@ -1,0 +1,225 @@
+/*
+ThemeWare Listing subcategories 02/04/2019
+====================================
+The `listing-subcategories.less` file contains the `Listing subcategories` styles of ThemeWare.
+*/
+
+& when not (@listing_subcategories_display=0) {
+    .tcinn-listing-subcategories {
+        display: flex;
+        flex-wrap: wrap;
+
+        .unitize-margin(10, 10);
+
+        width: calc(~"100% - 20px");
+
+        // Designs kommen später...
+        /*border-bottom: 1px solid #f6e7ef;*/
+        /*box-shadow: 0 30px 30px -30px rgba(0,0,0,0.1);*/
+        /*padding-bottom: 30px;*/
+
+        text-align: center;
+
+        &::before,
+        &::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        > a {
+            display: inline-block;
+            position: relative;
+
+            .unitize-margin(5, 5);
+            .unitize-padding(15, 0, 0, 0);
+
+            background: @listing_subcategories_bg;
+
+            border: 1px solid @listing_subcategories_border_color;
+            border-radius: @border_radius;
+
+            text-align: center;
+
+            &:hover {
+                background: @listing_subcategories_bg_hover;
+
+                border: 1px solid @listing_subcategories_border_color_hover;
+                border-radius: @border_radius;
+
+                // Designs kommen später...
+                /*box-shadow: 0 10px 15px -10px rgba(0,0,0,0.3);*/
+
+                span {
+                    color: @listing_subcategories_color_hover;
+                }
+
+                img {
+                }
+            }
+
+            span {
+                display: block;
+                margin: 0 auto;
+                .unitize-padding(5, 5, 12, 5);
+
+                .unitize(font-size, @listing_subcategories_font_size);
+                line-height: 1.4;
+                font-weight: @listing_subcategories_font_weight;
+                color: @listing_subcategories_color;
+                text-transform: @listing_subcategories_caps;
+            }
+
+            // Kategorie-Bezeichnung abkürzen
+            span when (@listing_subcategories_shorten=0) {
+                overflow: hidden;
+                -moz-text-overflow: ellipsis;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            // Mobile Darstellung
+            img when (@listing_subcategories_display=3) {
+                width: 100%;
+                margin: 0 auto;
+                border-top-left-radius: @border_radius;
+                border-top-right-radius: @border_radius;
+            }
+            img when not (@listing_subcategories_display=3) {
+                width: 100%;
+                max-width: @listing_subcategories_image_width;
+                margin: 0 auto;
+            }
+            
+            &.noimage {
+                padding: 0;
+
+                span {
+                    .unitize-padding(10, 10);
+                }
+            }
+        }
+    }
+
+    // Kategorien (Buttons/Kacheln) links ausrichten...
+    .tcinn-listing-subcategories & when (@listing_subcategories_button_alignment=0) {
+        justify-content: flex-start;
+    }
+
+    // Kategorien (Buttons/Kacheln) links ausrichten...
+    .tcinn-listing-subcategories & when (@listing_subcategories_button_alignment=1) {
+        justify-content: center;
+    }
+
+    // Kategorien (Buttons/Kacheln) links ausrichten...
+    .tcinn-listing-subcategories & when (@listing_subcategories_button_alignment=2) {
+        justify-content: flex-end;
+    }
+
+
+    /* Darstellungsart: Buttons */
+
+    // under construction...
+
+
+    /* Darstellungsart: Kacheln */
+
+    .tcinn-listing-subcategories {
+        > a {
+            width: calc(~"100% - 10px");
+            
+            // Mobile Darstellung
+            img { 
+                display: none; 
+            }
+            img when (@listing_subcategories_mobile=0) {
+                display: block;
+            }
+        }
+    }
+
+    // @phoneLandscapeViewportWidth: 30em; // 480px
+    @media (min-width:@phoneLandscapeViewportWidth) {
+        .tcinn-listing-subcategories > a {
+            width: calc(~"50% - 10px");
+        }
+    }
+
+    // @tabletViewportWidth: 48em; // 768px
+    @media (min-width:@tabletViewportWidth) {
+        .tcinn-listing-subcategories {
+            .unitize-margin(-5, -5, 15, -5);
+            width: calc(~"100% + 10px");
+
+            > a {
+                width: calc(~"50% - 10px");
+                
+                img {
+                    display: block;
+                }
+            }
+        }
+        
+    }
+
+    // @tabletLandscapeViewportWidth: 64em; // 1024px
+    @media (min-width:@tabletLandscapeViewportWidth) {
+        .tcinn-listing-subcategories > a {
+            width: calc(~"33.333% - 10px");
+        }
+    }
+
+    // @desktopViewportWidth: 78.75em; // 1260px
+    @media (min-width:@desktopViewportWidth) {
+        .tcinn-listing-subcategories > a {
+            width: calc(~"25% - 10px");
+        }
+    }
+
+    // 1440px
+    @media (min-width:1600px) {
+        .tcinn-listing-subcategories > a {
+            width: calc(~"20% - 10px");
+        }
+    }
+
+    // 2048px
+    @media (min-width:2048px) {
+        .tcinn-listing-subcategories > a {
+            width: calc(~"16.666% - 10px");
+        }
+    }
+
+    // 2560px
+    @media (min-width:2560px) {
+        .tcinn-listing-subcategories > a {
+            width: calc(~"10% - 10px");
+        }
+    }
+}
+
+/* Schriftart anpassen */
+
+& when not (@listing_subcategories_display=0) and (@listing_subcategories_font_family=1) {
+    .tcinn-listing-subcategories > a when (@body_font_family_primary=Standard) {
+        font-family: @font-base-stack; /*"Open Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
+    }
+    .tcinn-listing-subcategories > a when not (@body_font_family_primary=customfont1) and not (@body_font_family_primary=Standard) {
+        font-family: @body_font_family_primary, serif;
+    }
+    .tcinn-listing-subcategories > a when (@body_font_family_primary=customfont1) {
+        font-family: @body_font_family_primary_custom, serif;
+    }
+}
+
+& when not (@listing_subcategories_display=0) and (@listing_subcategories_font_family=2) {
+    .tcinn-listing-subcategories > a when (@body_font_family_sekundary=Standard) {
+        font-family: @font-base-stack; /*"Open Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
+    }
+    .tcinn-listing-subcategories > a when not (@body_font_family_sekundary=customfont2) and not (@body_font_family_sekundary=Standard) {
+        font-family: @body_font_family_sekundary, serif;
+    }
+    .tcinn-listing-subcategories > a li a when (@body_font_family_sekundary=customfont2) {
+        font-family: @body_font_family_sekundary_custom, serif;
+    }
+}

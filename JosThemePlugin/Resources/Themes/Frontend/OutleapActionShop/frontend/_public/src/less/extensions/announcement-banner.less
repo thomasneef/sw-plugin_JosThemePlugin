@@ -1,0 +1,51 @@
+/*
+ThemeWare Announcement banner 03/2020
+====================================
+The `announcement-banner.less` file contains the `Announcement banner` styles of ThemeWare.
+*/
+
+& when not (@announcement_banner_show=0) {
+  .tcinn-announcement-banner {
+    text-align: center;
+    font-size: 14px;
+    font-weight: @font-base-weight;
+    line-height: 1.5;
+    color: @announcement_banner_color;
+    border-bottom: 1px solid @announcement_banner_border_color;
+
+    background-color: @announcement_banner_bg_color;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-position: left center;
+
+    .inside {
+      max-width: @container_max_width;
+      margin: 0 auto;
+      padding: 6px 15px;
+    }
+
+    span {
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+    }
+
+    //.label:not(.success):not(.info):not(.warning):not(.error) {
+    span[class="label"] {
+      background-color: darken(@announcement_banner_bg_color, 25%);
+    }
+
+    *:not(strong) { /* overwrite defaults */
+      text-align: center;
+      font-size: 14px;
+      font-weight: @font-base-weight;
+      line-height: 1.5;
+      color: @announcement_banner_color;
+    }
+  }
+}

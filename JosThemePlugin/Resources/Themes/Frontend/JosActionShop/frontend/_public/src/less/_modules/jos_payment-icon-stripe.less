@@ -1,0 +1,99 @@
+.orangebytes--payment-icon-stripe{
+
+    background:@payment-shipping-bg-color;
+    .unitize-padding(40,10,30,10);
+
+    .column{
+        text-align:center;
+
+        .title{
+            .unitize(font-size,20);
+        }
+
+        .orangebytes--payment-icons{
+    
+            display:inline-block;
+            .unitize(margin-bottom,15);
+            .unitize(max-width,300);
+            .unitize(min-width,300);
+            overflow: hidden;
+
+            img{
+                .unitize(margin-bottom,8);
+                background:@payment-shipping-box-color;
+                .unitize(padding,5);
+                border: 1px solid @payment-shipping-border-color;
+                .unitize-margin(0,4,8,4);
+                float:left;
+                .unitize(height,52);
+            }
+        }
+    }
+}
+
+/* 30em | 480px | Phone Landscape*/
+@media screen and (min-width: @phoneLandscapeViewportWidth){
+    .orangebytes--payment-icon-stripe{
+        .column{
+            .orangebytes--payment-icons{
+                .unitize(max-width,400);
+            }
+        }
+    }
+}
+
+/* 48em | 768px | Tablet*/
+@media screen and (min-width: @tabletViewportWidth){
+    .orangebytes--payment-icon-stripe{
+        .column{
+
+            width:50%;
+            
+            &.left-column{
+    
+                float:left;
+                text-align:right;
+                .unitize(padding-right,15);
+    
+                .orangebytes--payment-icons{
+                    .unitize(max-width,700);
+                    img{
+                        float:right;
+                        .unitize-margin(0,0,8,8);
+                    }
+                }
+            }
+    
+            &.right-column{
+    
+                float:right;
+                text-align:left;
+                .unitize(padding-left,15);
+    
+                .orangebytes--payment-icons{
+    
+                    img{
+                        float:left;
+                        .unitize-margin(0,8,8,0);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 64em | 1024px | Tablet Landscape*/
+@media screen and (min-width: @tabletLandscapeViewportWidth){
+    .orangebytes--payment-icon-stripe{
+        .column{
+            .orangebytes--payment-icons{
+                max-width:none;
+            }
+        }
+    }
+}
+
+/* 78.75em | Desktop*/
+@media screen and (min-width: @desktopViewportWidth){
+
+}

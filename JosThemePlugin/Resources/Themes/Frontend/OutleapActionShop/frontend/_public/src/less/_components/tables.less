@@ -1,0 +1,24 @@
+table {
+    border-collapse: separate;
+    border-spacing: 1px;
+
+    th,
+    thead td {
+        background: @table-header-bg;
+        color: @brand-primary;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    td {
+        .unitize-padding(5, 10, 5, 10);
+        background: white;
+        color: @brand-primary;
+        border: 1px solid #ccc;
+        font-weight: 400;
+    }
+
+    tr:nth-child(even) td {
+        background: @titan-topbar-color;
+    }
+}

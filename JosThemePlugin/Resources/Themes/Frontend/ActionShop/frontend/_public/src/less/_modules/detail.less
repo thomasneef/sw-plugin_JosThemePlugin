@@ -1,0 +1,142 @@
+.product--details{
+
+    .product--header{
+        
+        min-height: unset;
+        padding-top:0;
+
+        .product--title{
+            font-weight:300;
+        }
+    }
+
+    .buybox--form{
+        .unitize-padding(20, 0, 20, 0);
+    }
+
+    .buybox--button{
+        width:75%;
+    }
+
+    .buybox--quantity {
+        margin: 0;
+        width: 25%;
+
+        .select-field:after, 
+        .js--fancy-select:after
+        {
+            .unitize(line-height,52);
+        }
+    }
+
+    .product--tax{
+        margin-bottom:0;
+    }
+
+    .buybox--quantity .select-field, 
+    .buybox--quantity .js--fancy-select,
+    .buybox--quantity .select-field:after,
+    .buybox--quantity .js--fancy-select:after{
+        .unitize(height, 50);
+    }
+
+    .product--properties tr:nth-child(even) td {
+        background: @gray-light;
+    }
+
+    .js--off-canvas-button{
+        .tab--content{
+            overflow:scroll;
+        }
+    }
+
+    .tab--content,.tab--container{
+        background:white;
+    }
+
+    
+
+    .tab-menu--product,.tab-menu--cross-selling .tab--container{
+        background:none;
+        border:none;
+        .material-design-box-shadow();
+    }
+
+}
+
+.product--detail-upper{
+    .unitize(padding,25);
+    .unitize(margin-bottom,30);
+    .unitize(margin-top,15);
+    background:white;
+    border: 1px solid @border-color;
+    .material-design-box-shadow();
+}
+
+.js--tab-menu .tab--link{
+    background:white;
+    background-image:none;
+    border-radius:0;
+}
+
+
+
+.is--ctl-detail .content-main--inner{
+    background:none;
+}
+
+/* 30em | 480px | Phone Landscape*/
+@media screen and (min-width: @phoneLandscapeViewportWidth){
+    
+    .product--details{
+        .configurator--form .select-field {
+            max-width:unset;
+        }
+
+        .tab-menu--product,.tab-menu--cross-selling .tab--container{
+            background:white;
+            border:1px solid @border-color;
+        }
+    }
+    
+}
+
+/* 48em | 768px | Tablet*/
+@media screen and (min-width: @tabletViewportWidth){
+    
+    .product--details{
+        .product--header .product--title {
+            .unitize(font-size,24);
+        }
+
+    }
+   
+}
+
+/* 64em | 1024px | Tablet Landscape*/
+@media screen and (min-width: @tabletLandscapeViewportWidth){
+
+    .product--details{
+            
+        .product--image-container{
+            width: 48%;
+            margin-right: 2%;
+        }
+
+        .product--buybox{
+            width: 50%;
+        }
+    }
+
+}
+
+/* 78.75em | Desktop*/
+@media screen and (min-width: @desktopViewportWidth){
+
+    .product--details{
+        .product--header{
+            padding-top:0;
+        }
+    }
+    
+}

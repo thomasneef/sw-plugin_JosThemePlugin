@@ -1,0 +1,225 @@
+
+    .topbar--features {
+        display: none; // USP-Bar vorerst ausblenden
+        
+        width: 100%;
+        height: @topbar_features_height;
+        padding: 0 0 0 0;
+    
+        background: @topbar_features_hintergrundfarbe;
+    
+        color: @topbar_features_textfarbe;
+        font-size: @topbar_features_schriftgroesse;
+        font-weight: @topbar_features_font_weight; // Strichstärken im Header 05.09.2017
+        line-height: @topbar_features_height;
+        text-align: center;
+        text-transform: @topbar_features_caps; // Großschreibung im Header 05.09.2017
+
+        clear: left;
+
+        overflow: hidden;
+        overflow-x: auto;
+
+        >div {
+            display: table;
+            max-width: @container_max_width;
+            margin: 0 auto;
+            width: 100%;
+            padding: 0 30px;
+            line-height: @topbar_features_height;
+            
+            >div {
+                display: none;
+                line-height: @topbar_features_height;
+                height: @topbar_features_height;
+                
+                i {
+                    padding-right: 10px;
+                    color: @topbar_features_iconfarbe;
+                    font-size: @topbar_features_icongroesse;
+                    line-height: 1;
+                    vertical-align: middle;
+                    display: inline;
+                    padding-bottom: 3px;
+                }
+                
+                span {
+                    color: @topbar_features_textfarbe;
+                    font-size: @topbar_features_schriftgroesse;
+                    line-height: 1;
+                    height: auto;
+                    display: inline-block;
+                    vertical-align: middle;
+                    padding-bottom: 3px;
+                    
+                    // USP mit Link
+                    a {
+                        color: @topbar_features_textfarbe !important;
+	                    line-height: 1;
+
+                        &:hover {
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mobil-usp {
+        .topbar--features {
+            >div {
+                >div {
+                    width: auto;
+                    float: none;
+                    padding: 0 20px;
+                    white-space: nowrap;
+                    line-height: @topbar_features_height;
+                    height: @topbar_features_height;
+                }
+            }
+        }
+    }
+
+    // USPs ab 1400px zentriert ausrichten
+    @media (max-width:1400px) {
+        .topbar--features {
+            >div {
+                >div[class^="feature-"] {
+                    text-align: center !important;
+                }
+                >div.feature-1 {}
+                >div.feature-2 {}
+                >div.feature-3 {}
+                >div.feature-4 {}
+            }
+        }
+
+    }
+
+    // USP-Bar padding unter 1260px auf '0' setzen
+    @media (max-width:1259px) {
+        .topbar--features {
+            >div {
+                padding: 0 !important;
+            }
+        }
+    }
+
+    // USPs einblenden je nach Viewport
+    @media (min-width:@desktopViewportWidth) { // 1260px
+        .topbar--features {
+            >div {
+                >div.b1259 {
+                    display: table-cell !important;
+                }
+            }
+        }
+    }
+    @media (min-width:@tabletLandscapeViewportWidth) { // 1024px
+        .topbar--features {
+            >div {
+                >div.b1023 {
+                    display: table-cell !important;
+                }
+            }
+        }
+    }
+    @media (min-width:@tabletViewportWidth) { // 768px
+        .topbar--features {
+            >div {
+                >div.b767 {
+                    display: table-cell !important;
+                }
+            }
+        }
+    }
+    @media (min-width:@phoneLandscapeViewportWidth) { // 480px
+        .topbar--features > div > div.b478 { display: table-cell !important; } /* deprecated */
+        .topbar--features {
+            >div {
+                >div.b479 {
+                    display: table-cell !important;
+                }
+            }
+        }
+    }
+    @media (min-width:280px) {
+        .topbar--features {
+            >div {
+                >div.b280 {
+                    display: table-cell !important;
+                }
+            }
+        }
+    }
+
+    // Erstes und letztes USP ausrichten
+    .topbar--features {
+        >div {
+            >div.feature-1 {
+                text-align: left;
+                padding-left: 0;
+            }
+            >div.feature-4 {
+                text-align: right;
+                padding-right: 0;
+            }
+        }
+    }
+    
+    // USP-Bar einblenden...
+    @media (min-width:280px) {
+        // ...wenn mind. 1 USP ab 280px aktiv ist...
+        & when 
+        (@topbar_features_phoneViewport_box_1 = 1), 
+        (@topbar_features_phoneViewport_box_2 = 1), 
+        (@topbar_features_phoneViewport_box_3 = 1), 
+        (@topbar_features_phoneViewport_box_4 = 1) {
+            .topbar--features {
+                display: block;
+            }
+        }
+    }
+    @media (min-width:@phoneLandscapeViewportWidth) { // 480px
+        // ...wenn mind. 1 USP ab 280px oder 480px aktiv ist...
+        & when 
+        (@topbar_features_phoneViewport_box_1 = 1), 
+        (@topbar_features_phoneViewport_box_2 = 1), 
+        (@topbar_features_phoneViewport_box_3 = 1), 
+        (@topbar_features_phoneViewport_box_4 = 1),
+        (@topbar_features_phoneLandscapeViewport_box_1 = 1), 
+        (@topbar_features_phoneLandscapeViewport_box_2 = 1), 
+        (@topbar_features_phoneLandscapeViewport_box_3 = 1), 
+        (@topbar_features_phoneLandscapeViewport_box_4 = 1) {
+            .topbar--features {
+                display: block;
+            }
+        }
+    }
+    
+    // USP-Bar ab 768px immer einblenden 
+    // Todo: weitere Viewports ausblenden ermöglichen
+    @media screen and (min-width: @tabletViewportWidth) { // 768px
+        .topbar--features {
+            display: block;
+        }
+    }
+
+
+
+// prüfen... ------------------------------------------------------------------
+.header-main-min .topbar--features {
+    border-bottom: 1px solid @border-color;
+}
+.topbar--features.footertop {
+    border-top: 1px solid @border-color;
+}
+.ftyp1 .topbar--features.footertop {
+    border-top: 0;
+}
+body.layout-fullwidth .topbar--features > div {
+    max-width: inherit;
+}
+
+

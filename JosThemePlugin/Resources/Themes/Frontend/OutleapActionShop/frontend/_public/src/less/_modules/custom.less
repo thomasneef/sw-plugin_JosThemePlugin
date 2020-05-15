@@ -1,0 +1,79 @@
+.custom-page--content{
+    background: white;
+    .unitize(padding,25);
+    border: 1px solid @border-color;
+    .unitize(margin-bottom,25);
+}
+
+.newsletter--form{
+
+    .unitize(margin-bottom,25);
+}
+
+.product--detail-upper{
+
+    .bestit-amazon-pay--express-button--container{
+        .unitize(margin-top,0);
+        .unitize(margin-bottom,20);
+    }
+}
+
+.product-slider--arrow {
+    border: none;
+    font-size: 24px;
+    color: #212221 !important;
+    background: #fff;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    border-radius: 0 !important;
+    background-clip: padding-box !important;
+}
+.product-slider--arrow:hover {
+    background: #fff;
+    color: #eea037 !important;
+    border-radius: 0px !important;
+    background-clip: padding-box !important;
+}
+
+
+/* 30em | 480px | Phone Landscape*/
+@media screen and (min-width: @phoneLandscapeViewportWidth){
+    .product--table .actions--bottom .main--actions{
+        margin-bottom:0
+    }
+}
+
+/* 48em | 768px | Tablet*/
+@media screen and (min-width: @tabletViewportWidth){
+    .topbar--features {
+        background:#f3f3f3;
+        color:#333;
+        & > div{
+            & > div {
+                i, span {
+                    color:inherit;
+                }
+            }
+        }
+    }
+}
+
+/* 64em | 1024px | Tablet Landscape*/
+@media screen and (min-width: @tabletLandscapeViewportWidth){
+
+}
+
+/* 78.75em | Desktop*/
+@media screen and (min-width: @desktopViewportWidth){
+
+    .content--wrapper{
+        .forms--content, .custom-page--content, .newsletter--content{
+            .unitize(margin-top,10);
+        }
+    }
+
+}

@@ -1,0 +1,57 @@
+.filter-panel{
+
+    .filter-panel--content{
+
+        label{
+            .unitize(font-size,@font-size-base);
+        }
+
+        i.icon--star-empty{
+            display:none;
+        }
+
+    }
+    
+}
+
+/* 30em | 480px | Phone Landscape*/
+@media screen and (min-width: @phoneLandscapeViewportWidth){
+    
+}
+
+/* 48em | 768px | Tablet*/
+@media screen and (min-width: @tabletViewportWidth){
+    
+    .filter--facet-container{
+
+        &.ob--filter--opened{
+
+            .filter-panel{
+                
+                height:auto;
+
+                .filter-panel--flyout{
+                    position:relative;
+                    height:auto;
+
+                    .filter-panel--icon{
+                        display:none;
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+
+/* 64em | 1024px | Tablet Landscape*/
+@media screen and (min-width: @tabletLandscapeViewportWidth){
+    
+}
+
+/* 78.75em | Desktop*/
+@media screen and (min-width: @desktopViewportWidth){
+    
+
+}

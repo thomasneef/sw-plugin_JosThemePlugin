@@ -1,0 +1,92 @@
+
+.account--welcome {
+    margin-bottom: 20px;
+    background: white;
+    border: 0 none;
+    padding: 0 0 0 10px;
+
+    .panel--title{
+        padding-top:0;
+        font-weight: 500;
+    }
+}
+
+.account--address{
+
+    &.account--content{
+        .unitize(padding-top,30);
+    }
+
+    .account--welcome{
+        .unitize(margin-bottom,20);
+    }
+
+    .address--item-content{
+        padding: 2% 0 0 2%;
+    }
+      
+}
+
+.account-address--container .account--box .btn{
+    line-height: 1.75rem;
+    background: transparent;
+    border: 1px solid @brand-primary;
+    color: @brand-primary;
+    font-weight: 500;
+}
+
+
+
+
+/* 30em | 480px | Phone Landscape*/
+@media screen and (min-width: @phoneLandscapeViewportWidth){
+
+}
+
+/* 48em | 768px | Tablet*/
+@media screen and (min-width: @tabletViewportWidth){
+
+    .account--menu {
+        border: 0 none;
+    }
+
+    .account--menu .navigation--headline {
+        display: none;
+    }
+
+    .account--menu .navigation--link.link--logout {
+        margin: 0.625rem 0rem 0rem 0rem;
+        padding: 0.625rem 0rem 0rem 0rem;
+        font-weight: 500;
+        color: @brand-primary;
+        background: transparent;
+        border: 0 none;
+    }
+
+
+
+}
+
+/* 64em | 1024px | Tablet Landscape*/
+@media screen and (min-width: @tabletLandscapeViewportWidth){
+
+}
+
+/* 78.75em | Desktop*/
+@media screen and (min-width: @desktopViewportWidth){
+    .account--content{
+        .unitize(margin-top,10);
+    }
+
+    .account--profile{
+        .unitize(padding-top,10);
+    }
+
+    .account--address{
+
+        &.account--content{
+            .unitize(padding-top,10);
+        }
+    }
+
+}

@@ -1,0 +1,52 @@
+.orangebytes--newsletter-stripe{
+
+    text-align:center;
+    .unitize-padding(40,10,40,10);
+    background:#ffffff;
+    color:@brand-secondary;
+    border-top:1px solid @border-color;
+
+    .container{
+        background:#ffffff;
+        color:@brand-secondary;
+    }
+
+    .newsletter--form{
+        .unitize(max-width,768);
+        margin:0 auto;
+
+        input{
+            background:#f1f1f3;
+            .unitize(margin-bottom,15);
+        }
+
+        input[type="email"]{
+            width:60%;
+        }
+    }
+
+    .btn{
+        .unitize(font-size,14);
+        .unitize-padding(10,10,9,10);
+        .unitize(line-height,19);
+        .unitize(margin-left,-5);
+        .unitize(margin-bottom,10);
+        width:30%;
+        text-align:center;
+    }
+
+    .orangebytes--newsletter-stripe-title{
+        .unitize(font-size,20);
+        .unitize(margin-bottom,0);
+    }
+
+
+    @media screen and (max-width: @tabletLandscapeViewportWidth){
+        input[type="email"],
+        .btn{
+            width:60%;
+        }
+    }
+
+
+}

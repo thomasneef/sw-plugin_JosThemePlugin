@@ -1,0 +1,535 @@
+/*
+Footer
+==========================================
+*/
+
+.footer-main {
+    background: @titan-footer-bg-color;
+
+    .column--wir{
+        padding-right:0;
+    }
+
+   /* .orangebytes--payment-icon-stripe {
+        .footer--fad-icon {
+            width: 80px;
+            height: auto;
+            position: absolute;
+            left:50%;
+            bottom: -40px;
+            margin-left: -40px;
+            img {
+                width: 80px;
+                height: auto;
+            }
+        }
+    }
+
+*/
+    .footer--phone-link {
+        .unitize(font-size, 19);
+        font-weight: @font-bold-weight;
+        color: @titan-footer-font-color;
+    }
+
+    .footer--column {
+        width: 100%;
+        .unitize-padding(0, 10);
+        border-top: 1px solid @border-color;
+
+        &.is--last {
+            border-bottom: 1px solid @border-color;
+        }
+    }
+
+    .column--headline {
+        width: 100%;
+        .user-select(none);
+        .unitize-padding(8, 0);
+        margin: 0;
+        cursor: pointer;
+        .unitize(font-size, 16);
+        .unitize(line-height, 26);
+        font-size: @jos-footer-title-size;
+        font-weight: @jos-footer-title-weight;
+        color:  @jos-footer-title-color;
+        display: inline-block;
+        .unitize(padding-bottom,10);
+        border-bottom: 1px solid #fff;
+
+
+        &.is--active::after {
+            content: @sw-icon-minus3;
+        }
+
+        &::after {
+            .unitize(font-size, 18);
+            font-family: @sw-icon-fontname;
+            color: @titan-footer-font-color;
+            font-weight: @font-bold-weight;
+            content: @sw-icon-plus3;
+            float: right;
+        }
+    }
+
+    .column--content {
+        display: none;
+        padding-top: 20px;
+        position: relative;
+
+        &.is--active {
+            display: block;
+        }
+
+        .footer--chat-icon {
+            width: 100px;
+            height: 55px;
+            position: absolute;
+            left: 70%;
+            bottom: 75px;
+            margin-left: -40px;
+            img {
+                width: 100px;
+                height: 55px;
+            }
+        }
+
+    }
+
+    // Second footer with the Shopware logo and vat notice
+    .footer--bottom {
+        .unitize(font-size, 12);
+        .unitize-padding(16, 12, 0, 12, 12);
+        text-align: center;
+    }
+
+    .footer--copyright {
+        .unitize(font-size, 13);
+    }
+
+    .footer--logo {
+        .unitize(font-size, 28);
+        color: @titan-footer-font-color;
+    }
+
+    // Navigation links
+    .navigation--list {
+        .unitize-padding(0, 0, 16, 0);
+
+        .is--level1 {
+            .unitize(padding-bottom, 10);
+
+            .navigation--entry {
+                .unitize(margin-left, 10);
+            }
+        }
+    }
+
+    .navigation--link {
+        .unitize-padding(10, 0, 10, 0, 16);
+        display: block;
+        color: @titan-footer-font-color;
+        cursor: pointer;
+
+        &:hover {
+            color: @brand-primary;
+        }
+    }
+
+    // Newsletter registration
+    .newsletter--form {
+        .clearfix();
+        .unitize-padding(0, 0, 16, 0, 16);
+    }
+
+    .newsletter--field {
+        .border-radius-multi(3px, 0, 0, 3px);
+        .unitize-margin(0, 0, 10);
+        position: relative;
+        width: 87.5%;
+        float: left;
+
+        &:focus {
+            z-index: @zindex-footer-newsletter-field-focus;
+        }
+    }
+
+    .newsletter--button {
+        .box-shadow(0 0 0 transparent);
+        .border-radius-multi(0, 3px, 3px, 0);
+        .unitize-margin(0, 0, 10);
+        .unitize-padding(3, 5, 3, 5, 16);
+        .unitize(-1, 16, margin-left);
+        position: relative;
+        width: 12.5%;
+        text-align: center;
+        float: left;
+
+        .icon--mail {
+            .unitize(font-size, 14);
+            .unitize(margin-right, 0);
+        }
+
+        .button--text {
+            display: none
+        }
+    }
+
+    .footer--logo {
+        .unitize-padding(10, 0);
+    }
+
+
+
+    .jos-footer-bottom{
+        display: block;
+        background:@brand-primary;
+        width: 100%;
+        padding: 15px 0;
+        color: white;
+
+        .container{
+            .jos-footer-bottom-box{
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -webkit-flex-wrap: nowrap;
+                -ms-flex-wrap: nowrap;
+                flex-wrap: nowrap;
+                -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-align-content: center;
+                -ms-flex-line-pack: center;
+                align-content: center;
+                -webkit-align-items: center;
+                -ms-flex-align: center;
+                align-items: center;
+
+                .jos-footer-item{
+                    webkit-order: 0;
+                    -ms-flex-order: 0;
+                    order: 0;
+                    -webkit-flex: 0 1 auto;
+                    -ms-flex: 0 1 auto;
+                    flex: 0 1 auto;
+                    -webkit-align-self: auto;
+                    -ms-flex-item-align: auto;
+                    align-self: auto;
+                    text-align: center;
+                    margin: 0px 15px;
+
+                }
+                .jos-footer-bottom-box-vat, .jos-footer-bottom-box-copyright{
+                    cursor: pointer;
+                    .unitize(font-size, 10);
+                    .unitize(line-height, 12);
+                    font-weight: 400;
+                    color:  white;
+                }
+                .jos-footer-bottom-box-copyright{
+                    margin-top:10px;
+                }
+            }
+        }
+    }
+
+
+
+}
+
+.footer-vat {
+    .unitize(margin-top, 10);
+    .unitize-padding(0, 5);
+    background: transparent;
+}
+
+.footer--vat-info {
+    .vat-info--text {
+        .unitize(font-size, 12);
+        .unitize(margin-bottom, 10);
+        text-align: center;
+    }
+}
+
+.footer-minimal {
+    .unitize(font-size, 13);
+    .unitize-padding(40, 10, 20, 10);
+    background: transparent;
+    text-align: center;
+
+    .footer-main & {
+        padding: 0;
+    }
+
+    .footer--service-menu .service--list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        .service--link {
+            .unitize-padding(8, 2);
+            display: inline-block;
+        }
+
+        .service--entry {
+            display: inline-block;
+
+            &:after {
+                .unitize-height(10, 16);
+                .unitize-width(1, 16);
+                .unitize-margin(0, 5);
+                border-left: 1px solid darken(@border-color, 10%);
+                display: inline-block;
+                content: '';
+            }
+
+            &:last-child:after {
+                display: none;
+            }
+        }
+    }
+
+    .footer--vat-info {
+        .unitize-margin(15, 0, 10, 0);
+
+        .vat-info--text {
+            .unitize(line-height, 18);
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (min-width: @tabletViewportWidth) {
+    .footer-main .footer-minimal {
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: @tabletViewportWidth) {
+    .footer-main {
+        border-top: 1px solid @border-color;
+
+        .column--headline {
+            .unitize-margin(28, 0, 10, 0, 16);
+            padding: 0;
+            cursor: text;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        .footer--column {
+            .unitize-padding(0, 10, 0, 0, 16);
+            width: 50%;
+            border: 0 none;
+
+            &.is--last {
+                padding-right: 0;
+                border-bottom: 0 none;
+            }
+        }
+
+        .footer--columns {
+            .unitize-padding(40, 30, 10, 30);
+            border-bottom: 1px solid @border-color;
+        }
+
+        .column--content {
+            display: block;
+            padding-right: 20px;
+            position: relative;
+        }
+
+        // Don't display sub Navigation links on tablet/desktop
+        .navigation--list {
+            .is--level1 {
+                display: none;
+            }
+        }
+
+        .navigation--entry {
+            padding: 0;
+        }
+
+        .navigation--link {
+            line-height: 1.7;
+            padding: 0
+        }
+
+        .newsletter--field {
+            width: 80%;
+        }
+
+        .newsletter--button {
+            width: 20%;
+
+            .icon--mail {
+                .unitize(font-size, 12);
+            }
+        }
+    }
+
+    .footer-vat {
+        padding: 0;
+    }
+
+    .footer--vat-info {
+        .vat-info--text {
+            .unitize(margin-bottom, 20);
+        }
+    }
+}
+
+
+
+
+
+
+/* 64em | 1024px | Tablet Landscape*/
+@media screen and (min-width: @tabletLandscapeViewportWidth){
+
+    .footer-main {
+        border-top: 1px solid @border-color;
+
+        .column--wir{
+            padding-right:30px;
+        }
+
+        .footer--columns {
+            .unitize-padding(40, 0, 20, 0, 16);
+        }
+
+
+        .column--headline {
+            .unitize-margin(28, 0, 10, 0, 16);
+            padding: 0;
+            cursor: text;
+            border-bottom: 0 none;
+
+            &:after{
+                content: "";
+                width: 60px;
+                height: 3px;
+                background-color: #ed9e35;
+                left: 0;
+                position: relative;
+                display: block;
+                top: 5px;
+                float: none;
+            }
+
+        }
+
+        .column--content {
+            .footer--chat-icon {
+                width: 100px;
+                height: 55px;
+                position: absolute;
+                left: 45%;
+                bottom: 75px;
+                margin-left: -40px;
+                img {
+                    width: 100px;
+                    height: 55px;
+                }
+            }
+        }
+
+
+
+        .footer--column {
+            .unitize-padding(0, 30, 0, 0, 16);
+            width: 50%;
+            border: 0 none;
+
+            &.is--last {
+                padding-right: 0;
+                border-bottom: 0 none;
+            }
+        }
+
+        .jos-footer-bottom{
+            display: block;
+            background:@brand-primary;
+            width: 100%;
+            padding: 15px 0;
+            color: white;
+
+            .container{
+                .jos-footer-bottom-box{
+                    display: -ms-flexbox;
+                    display: -webkit-flex;
+                    display: flex;
+                    -webkit-flex-direction: row;
+                    -ms-flex-direction: row;
+                    flex-direction: row;
+                    -webkit-flex-wrap: nowrap;
+                    -ms-flex-wrap: nowrap;
+                    flex-wrap: nowrap;
+                    -webkit-justify-content: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    -webkit-align-content: center;
+                    -ms-flex-line-pack: center;
+                    align-content: center;
+                    -webkit-align-items: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+
+                    .jos-footer-item{
+                        webkit-order: 0;
+                        -ms-flex-order: 0;
+                        order: 0;
+                        -webkit-flex: 0 1 auto;
+                        -ms-flex: 0 1 auto;
+                        flex: 0 1 auto;
+                        -webkit-align-self: auto;
+                        -ms-flex-item-align: auto;
+                        align-self: auto;
+                        text-align: center;
+                        margin: 0px 15px;
+
+                    }
+                    .jos-footer-bottom-box-vat, .jos-footer-bottom-box-copyright{
+                        cursor: pointer;
+                        .unitize(font-size, 10);
+                        .unitize(line-height, 12);
+                        font-weight: 400;
+                        color:  white;
+                    }
+                    .jos-footer-bottom-box-copyright{
+                        margin-top:0;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+
+}
+
+
+
+@media screen and (min-width: @desktopViewportWidth) {
+    .footer-main {
+        .footer--columns {
+            .unitize-padding(40, 0, 20, 0, 16);
+        }
+
+        .footer--bottom {
+            .unitize(font-size, 15);
+        }
+    }
+
+    .footer-minimal {
+        padding-top: 0;
+    }
+}

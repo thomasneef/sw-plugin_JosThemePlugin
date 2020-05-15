@@ -1,0 +1,129 @@
+/*
+Google Translate
+====================================
+
+*/
+
+.entry--google-translate {
+    display: none;
+}
+
+& when not (@google_translate_show = 0) {
+
+    @media (max-width: 767px) {
+        .header-main { 
+            margin-top: 30px; 
+        }
+
+        .entry--google-translate {
+            background: @gray-light;
+            display: inline-block;
+            height: 30px !important;
+            left: 0px;
+            line-height: 30px !important;
+            margin-top: -30px !important;
+            padding: 0 15px;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+        }
+
+        .headtyp-3 .header-main .topbar.top-bar > .top-bar--navigation {
+            float: none;
+            padding: 0px;
+            margin: 0px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .entry--google-translate {
+            display: inline-block;
+        }
+    }
+}
+
+/* todo: header finetuning, "transparenter header" testen */
+
+#google_translate_element when not (@google_translate_show = 0) {
+    display: inline-block;
+
+	.goog-te-gadget {
+
+		.goog-te-gadget-icon, img {
+			display: inline-block;
+            margin-top: -3px;
+		}
+
+		.goog-te-gadget-icon when (@google_translate_show = 2) {
+			display: none !important;
+		}
+
+		.goog-te-gadget-icon + span, img + span {
+			vertical-align: top !important;
+		}
+
+		.goog-te-menu-value, a {
+			margin-right: 0px;
+
+			span, img { 
+				display: none; 
+			}
+			span:first-of-type {
+				display: inline-block;
+				font-size: @header_font_size;
+			}
+		}
+
+		.goog-te-menu-value when (@google_translate_show = 2) {
+			margin-left: 0px !important;
+		}
+	}
+
+	.goog-te-gadget > div {
+		border: none;
+		padding: 0px;
+		background: none;
+	}
+}
+
+.goog-te-menu-frame {
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+& when not (@body_font_family_primary=Standard) {
+    /* Google Font */
+    a.goog-te-menu-value when not (@body_font_family_primary = customfont1) {
+        font-family: @body_font_family_primary, serif;
+    }
+    /* Individueller Font */
+    a.goog-te-menu-value when (@body_font_family_primary = customfont1) {
+        font-family: @body_font_family_primary_custom, serif;
+    }
+}
+
+a.goog-te-menu-value,
+a.goog-te-menu-value::after {
+	color:@topmenu_service_text_link_color;
+}
+
+a.goog-te-menu-value:hover,
+a.goog-te-menu-value:hover::after {
+	color:@topmenu_service_text_link_color_hover;
+}
+
+a.goog-te-menu-value::after {
+    top: -3px;
+    top: -0.1875rem;
+    margin-left: 5px;
+    margin-left: 0.3125rem;
+    content: "\e612";
+    font-family: 'shopware', sans-serif;
+    position: relative;
+	font-size: 5px;
+}
+
+@media (min-width: 768px) {
+    .header-main .top-bar--navigation .entry--google-translate when (@header_typ=0), (@header_typ=5) {
+        border-left: 1px solid @header_border_color;
+    }
+}

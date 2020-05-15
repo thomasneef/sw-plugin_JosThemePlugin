@@ -1,0 +1,143 @@
+/*
+ *  Copyright (C) Thomas Neef | neefit.de - All Rights Reserved
+ * @author  Thomas Neef
+ * @Modul  Projects
+ * @Class  sidebar_account.less
+ * @date  09.05.20, 16:34
+ */
+
+.account--dropdown-navigation {
+  background: #fff;
+  min-width: 12.5rem;
+  max-width: 100%;
+  padding: 0.3125rem 0rem 0.3125rem 0rem;
+  border: 1px solid #ccc;
+  //top: 55px;
+  //display: none;
+  //position: absolute;
+  //right: 0;
+  //z-index: 3500;
+  text-align: left;
+}
+
+.account--dropdown-navigation.off-canvas {
+  background: #fff;
+}
+
+.account--dropdown-navigation{
+  .jos_container {
+    padding: 20px;
+    display: block;
+
+    .jos_sidebar_mobile_header {
+      display: inline-block;
+      width: 100%;
+      padding: 15px 10px;
+      font-size: 20px;
+      font-weight: 500;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+    .anmelden--button.btn.is--primary {
+      padding: .125rem .75rem .125rem .75rem;
+      line-height: 2.125rem;
+      background-color: #000;
+      background-image: linear-gradient(to bottom, #000 0%, #000 100%);
+      border: 0 none;
+      color: #fff !important;
+      display: block;
+      text-align: center;
+    }
+
+    .registrieren-container {
+      text-align: center;
+      display: block;
+      border-bottom: 1px solid #eee;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      padding-top: 3px;
+      line-height: 1.3 !important;
+    }
+
+    .registrieren-container a {
+      text-decoration: underline;
+    }
+
+    .infotext-container {
+      text-align: center;
+      line-height: 1.3 !important;
+    }
+
+  }
+}
+.account--dropdown-navigation:after {
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  width: 8px;
+  height: 8px;
+  top: -5px;
+  left: 160px;
+  content: '';
+  display: block;
+  position: absolute;
+  background: #fff;
+  border-color: #eee;
+  border-width: 0 0 1px 1px;
+  border-style: solid;
+}
+
+
+.off-canvas .ajax--cart .cart--item {
+  text-align: center;
+  line-height: 1.3 !important;
+  padding: 10px 0;
+}
+
+.account--dropdown-navigation.off-canvas .account--menu .navigation--entry,
+.account--dropdown-navigation.off-canvas .sidebar--navigation .navigation--entry {
+  display: block;
+  margin: 0;
+  width: 100%;
+  padding: 0 10px;
+}
+
+
+
+.account--dropdown-navigation.off-canvas .account--menu .jos-oncanvas-buttoncontainer,
+.account--dropdown-navigation.off-canvas .sidebar--navigation .jos-oncanvas-buttoncontainer,
+.account--dropdown-navigation.off-canvas .account--menu .jos-account-new-infotext-container,
+.account--dropdown-navigation.off-canvas .sidebar--navigation .jos-account-new-infotext-container
+{
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.jos-account-new-infotext{
+  text-align: center;
+}
+
+.account--dropdown-navigation .navigation--link.link--logout.navigation--personalized {
+  line-height: 1.5rem;
+  padding: 5px 0 5px 0;
+  color: white;
+  font-weight: 500;
+  background: black;
+  width: 100%;
+  height: auto;
+  font-size: 14px;
+}
+.header-main .header--navigation .shop--navigation .navigation--entry i {
+  font-size: 24px !important;
+}
+
+.account--dropdown-navigation .navigation--signin .navigation--signin-btn.btn {
+  margin-bottom: 0.3125rem;
+  width: 100%;
+  text-align: center;
+  background: black;
+  font-size: 1rem;
+  padding: 12px 0 0 0;
+}
+
+

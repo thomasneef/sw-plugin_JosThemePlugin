@@ -1,0 +1,176 @@
+.orangebytes--payment-icon-stripe{
+    position: relative;
+    background: #fff;
+    .unitize-padding(40,10,30,10);
+
+    .footer--jos-icon {
+       display: none;
+    }
+
+
+    .container{
+        .title{
+            .user-select(none);
+            .unitize-padding(8, 0);
+            margin: 0;
+            cursor: pointer;
+            .unitize(font-size, 16);
+            .unitize(line-height, 26);
+            font-size: @jos-footer-title-size;
+            font-weight: @jos-footer-title-weight;
+            color:  @jos-footer-title-color;
+            display: inline-block;
+            .unitize(padding-bottom,1);
+            text-align: center;
+            margin-bottom: 20px;
+            width:100%;
+        }
+    }
+
+    .column{
+        text-align:center;
+
+        .title{
+            .user-select(none);
+            .unitize-padding(8, 0);
+            margin: 0;
+            cursor: pointer;
+            .unitize(font-size, 16);
+            .unitize(line-height, 26);
+            font-size: @jos-footer-title-size;
+            font-weight: @jos-footer-title-weight;
+            color:  @jos-footer-title-color;
+            display: inline-block;
+            .unitize(padding-bottom,1);
+            text-align: center;
+        }
+
+        .orangebytes--payment-icons{
+
+            display:inline-block;
+            .unitize(margin-bottom,15);
+            .unitize(max-width,300);
+            .unitize(min-width,300);
+            overflow: hidden;
+
+            img{
+                .unitize(margin-bottom,8);
+                background:@payment-shipping-box-color;
+                .unitize(padding,5);
+                border: 1px solid @payment-shipping-border-color;
+                .unitize-margin(0,4,8,4);
+                float:left;
+                .unitize(height,52);
+            }
+        }
+    }
+}
+
+/* 30em | 480px | Phone Landscape*/
+@media screen and (min-width: @phoneLandscapeViewportWidth){
+    .orangebytes--payment-icon-stripe{
+        .column{
+            .orangebytes--payment-icons{
+                .unitize(max-width,400);
+            }
+        }
+    }
+}
+
+/* 48em | 768px | Tablet*/
+@media screen and (min-width: @tabletViewportWidth){
+    .orangebytes--payment-icon-stripe{
+        background: #fff;
+        .footer--jos-icon {
+            display: block;
+            width: 50px;
+            height: auto;
+            position: absolute;
+            left:50%;
+            bottom: -25px;
+            margin-left: -40px;
+            img {
+                width: 50px;
+                height: auto;
+            }
+        }
+        .column{
+            width:100%;
+
+            &.left-column{
+                float:left;
+                text-align:right;
+                .unitize(padding-right,15);
+
+                .orangebytes--payment-icons{
+                    .unitize(max-width,700);
+                    img{
+                        float:right;
+                        .unitize-margin(0,0,8,8);
+                    }
+                }
+            }
+
+            &.right-column{
+
+                float:right;
+                text-align:left;
+                .unitize(padding-left,15);
+
+                .orangebytes--payment-icons{
+
+                    img{
+                        float:left;
+                        .unitize-margin(0,8,8,0);
+                    }
+                }
+            }
+
+
+            &.center-column{
+                float:none;
+                text-align: center;
+                .unitize(padding-right,15);
+
+                .orangebytes--payment-icons{
+                    .unitize(max-width,700);
+                    img{
+                        float:right;
+                        .unitize-margin(0,0,8,8);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 64em | 1024px | Tablet Landscape*/
+@media screen and (min-width: @tabletLandscapeViewportWidth){
+    .orangebytes--payment-icon-stripe{
+        background: #fff;
+
+        .footer--jos-icon {
+            width: 80px;
+            height: auto;
+            position: absolute;
+            left:50%;
+            bottom: -40px;
+            margin-left: -40px;
+            img {
+                width: 80px;
+                height: auto;
+            }
+        }
+
+        .column{
+            .orangebytes--payment-icons{
+                max-width:none;
+            }
+        }
+    }
+}
+
+/* 78.75em | Desktop*/
+@media screen and (min-width: @desktopViewportWidth){
+
+}

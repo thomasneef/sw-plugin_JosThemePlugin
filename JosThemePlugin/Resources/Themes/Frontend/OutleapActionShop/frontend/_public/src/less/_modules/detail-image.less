@@ -1,0 +1,310 @@
+/*
+ *  Copyright (C) Thomas Neef | neefit.de - All Rights Reserved
+ * @author  Thomas Neef
+ * @Modul  Projects
+ * @Class  detail-image.less
+ * @date  11.05.20, 11:31
+ */
+
+
+  .image-slider .image-slider--thumbnails {
+    padding: 20px 20px 10px 20px;
+    height: 100px;
+    background: @panel-bg;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    display: block;
+    float: none;
+  }
+  .image-slider .image-slider--thumbnails .image-slider--thumbnails-slide {
+    margin: 0px 5px 0px 5px;
+    left: auto;
+    right: auto;
+    top: auto;
+    text-align: center;
+  }
+  .image-slider .image-slider--thumbnails .thumbnail--link {
+    margin: 0px 5px 0px 0px;
+    display: inline-block;
+  }
+
+.image-slider--thumbnails .thumbnail--link {
+  width: 4.375rem;
+  height: 4.375rem;
+  padding: 0.3125rem 0.3125rem 0.3125rem 0.3125rem;
+  margin: 0rem 0.625rem 0rem 0rem;
+  line-height: 3.5625rem;
+  border-radius: 0;
+  background-clip: padding-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  display: inline-block;
+  text-align: center;
+  border: 0 none;
+}
+
+.image-slider--thumbnails .thumbnail--link.is--active {
+  border: 0 none;
+  border-bottom: 2px solid @brand-secondary;
+}
+
+
+  .image-slider--thumbnails .thumbnails--arrow.is--left,
+  .image-slider--thumbnails .thumbnails--arrow.is--right {
+    top: 20px;
+    background: @panel-bg;
+  }
+  .image-slider--dots {
+    display: none;
+  }
+
+.image--gallery .button--zoom-out {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-clip: padding-box;
+  background: transparent;
+  border: 0 none;
+  color: @brand-primary;
+}
+.image--gallery .button--zoom-reset {
+  left: 2.6875rem;
+  border-radius: 0;
+  background: transparent;
+  border: 0 none;
+  color: @brand-primary;
+}
+
+.image--gallery .button--zoom-in {
+  border-top-left-radius: 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 0;
+  background-clip: padding-box;
+  background: transparent;
+  left: 4.75rem;
+  border: 0 none;
+  color: @brand-primary;
+}
+.js--img-zoom--lens {
+  border-radius: 0;
+  background-clip: padding-box;
+  display: none;
+  background: transparent;
+  border: 0 none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  color: @brand-primary;
+}
+
+
+
+
+/*
+
+
+.image-slider--thumbnails {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 20px;
+  position: relative;
+  top: 0;
+  left: 0;
+  float: left;
+}
+.image-slider--thumbnails-slide {
+  display: block;
+  width: auto;
+  background: white;
+  position: absolute;
+}
+.image-slider--thumbnails-slide {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  background: gainsboro;
+}
+
+.image-slider--thumbnails .thumbnails--arrow.is--left {
+  border-top-left-radius: 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 0;
+  background-clip: padding-box;
+  width: 1.5rem;
+  top: 0;
+  left: 0;
+}
+.image-slider--thumbnails .thumbnails--arrow.is--left {
+  border-top-left-radius: 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 0;
+  background-clip: padding-box;
+  width: 1.5rem;
+  top: 0;
+  left: 0;
+}
+
+.image-slider--thumbnails .thumbnails--arrow {
+  width: 1.25rem;
+  height: 4.375rem;
+  line-height: 4.375rem;
+  font-size: .875rem;
+  border-radius: 3px;
+  background-clip: padding-box;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  background-color: #fff;
+  background-image: linear-gradient(to bottom, #fff 0%, #808080 100%);
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  font-family: 'shopware';
+  text-align: center;
+  color: #414141;
+  border: 1px solid rgba(255,255,255,0.85);
+  cursor: pointer;
+  background: rgba(255,255,255,0.85);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.image--gallery {
+  .image-slider--container {
+    .unitize(bottom, 90);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    margin: 0;
+  }
+
+  &.no--thumbnails .image-slider--container {
+    bottom: 0;
+  }
+
+  .image-slider--item {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    cursor: default;
+
+    .image--element {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      width: auto;
+    }
+
+    .image--media, img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+
+  .image-slider--thumbnails {
+    .unitize-padding(10, 0);
+    .unitize(height, 90);
+    background: #fff;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    display: block;
+
+    .thumbnails--arrow {
+      .unitize(top, 10);
+
+      &.is--left {
+        border-left: 0 none;
+      }
+
+      &.is--right {
+        border-right: 0 none;
+      }
+    }
+  }
+
+  .image-slider--thumbnails-slide {
+    .unitize-margin(0, 10);
+    left: auto;
+    top: auto;
+  }
+
+  .thumbnail--link {
+    .unitize-margin(0, 10, 0, 0);
+    display: inline-block;
+  }
+
+  .button--zoom-in,
+  .button--zoom-out,
+  .button--zoom-reset {
+    .unitize(top, 10);
+    .unitize(left, 10);
+    .unitize(font-size, 20);
+    .unitize-padding(2, 6);
+    position: absolute;
+
+    &:hover {
+      z-index: @zindex-image-gallery-button;
+    }
+  }
+
+  .button--zoom-out {
+    .border-radius-multi(3px, 0, 0, 3px);
+  }
+
+  .button--zoom-reset {
+    .unitize(left, 43);
+    border-radius: 0;
+  }
+
+  .button--zoom-in {
+    .border-radius-multi(0, 3px, 3px, 0);
+    .unitize(left, 76);
+  }
+}
+
+.image-gallery--modal {
+  .modal--close {
+    .unitize(top, 10);
+    .unitize(width, 34);
+    .unitize(height, 34);
+    .unitize(line-height, 32);
+  }
+}
+
+
+ */

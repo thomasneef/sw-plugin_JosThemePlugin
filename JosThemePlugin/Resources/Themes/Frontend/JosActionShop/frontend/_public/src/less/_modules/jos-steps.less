@@ -1,0 +1,416 @@
+/*
+ *  Copyright (C) Thomas Neef | neefit.de - All Rights Reserved
+ * @author  Thomas Neef
+ * @Modul  Projects
+ * @Class  jos-steps.less
+ * @date  11.05.20, 14:56
+ */
+
+
+
+.header-main{
+  .steps--container{
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: white;
+    padding: 10px 0 0;
+
+    .container{
+      background: white;
+
+      .jos-steps-flex-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 2px 2px;
+        grid-template-areas: ". . . .";
+        align-items: center;
+        width: 100%;
+        padding: 1px 0;
+
+
+        .jos-steps-flex-item {
+          width: 100%;
+         // height: 50px;
+          text-align: center;
+          margin: 0 auto;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-flex-wrap: nowrap;
+          -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-align-content: center;
+          -ms-flex-line-pack: center;
+          align-content: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+
+            .jos-steps-flex-item-icon{
+              text-align: center;
+              width: 23px;
+             // height: 23px;
+              border-radius: 50px;
+              background-clip: padding-box;
+              border: 1px solid @brand-primary;
+              color: @brand-primary;
+              font-size: 14px;
+              line-height: 20px;
+              padding: 0;
+              background: transparent;
+            }
+
+          .jos-steps-flex-item-text{
+            text-align: center;
+            width: 100%;
+           // height: 15px;
+            font-size: 10px;
+            padding: 5px 0;
+            color: @brand-primary;
+          }
+        }
+
+        .jos-steps-flex-item.is--active .jos-steps-flex-item-text{
+          text-align: center;
+          width: 100%;
+          //height: 15px;
+          font-size: 10px;
+          padding: 5px 0 0 0;
+          color: @highlight-success;
+        }
+
+        .jos-steps-flex-item.is--active .jos-steps-flex-item-icon{
+          text-align: center;
+          width: 23px;
+          //height: 23px;
+          border-radius: 50px;
+          background-clip: padding-box;
+          border: 1px solid @highlight-success;
+          color: white;
+          font-size: 14px;
+          line-height: 20px;
+          padding: 0;
+          background: @highlight-success;
+        }
+      }
+    }
+  }
+}
+
+
+/* 30em | 480px | Phone Landscape*/
+@media screen and (min-width: @phoneLandscapeViewportWidth){
+
+}
+
+/* 48em | 768px | Tablet*/
+@media screen and (min-width: @tabletViewportWidth){
+
+  .header-main{
+    .steps--container{
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      background: white;
+      padding:  0;
+
+      .container{
+        background: white;
+
+        .jos-steps-flex-container{
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-template-rows: 1fr;
+          gap: 5px 5px;
+          grid-template-areas: ". . . .";
+          align-items: center;
+          width: 100%;
+          padding: 20px 0;
+
+
+          .jos-steps-flex-item {
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-align-content: center;
+            -ms-flex-line-pack: center;
+            align-content: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+
+            .jos-steps-flex-item-icon{
+              text-align: center;
+              width: 30px;
+              height: 30px;
+              border-radius: 50px;
+              background-clip: padding-box;
+              border: 1px solid @brand-primary;
+              color: @brand-primary;
+              font-size: 15px;
+              line-height: 30px;
+              padding: 0;
+              background: transparent;
+            }
+
+            .jos-steps-flex-item-text{
+              text-align: center;
+              width: 100%;
+              height: auto;
+              font-size: 14px;
+              padding: 5px 0 0 0;
+              color: @brand-primary;
+            }
+          }
+
+          .jos-steps-flex-item.is--active .jos-steps-flex-item-text{
+            text-align: center;
+            width: 100%;
+            height: auto;
+            font-size: 14px;
+            padding: 5px 0 0 0;
+            color: @highlight-success;
+          }
+
+          .jos-steps-flex-item.is--active .jos-steps-flex-item-icon{
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50px;
+            background-clip: padding-box;
+            border: 1px solid @highlight-success;
+            color: white;
+            font-size: 15px;
+            line-height: 30px;
+            padding: 0;
+            background: @highlight-success;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 64em | 1024px | Tablet Landscape*/
+@media screen and (min-width: @tabletLandscapeViewportWidth){
+
+  .header-main{
+    .steps--container{
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      background: white;
+
+      .container{
+        background: white;
+
+        .jos-steps-flex-container{
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-template-rows: 1fr;
+          gap: 5px 5px;
+          grid-template-areas: ". . . .";
+          align-items: center;
+          width: 90%;
+          padding: 20px 0;
+          margin: 0 auto;
+        }
+
+
+          .jos-steps-flex-item {
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-align-content: center;
+            -ms-flex-line-pack: center;
+            align-content: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+
+            .jos-steps-flex-item-icon{
+              text-align: center;
+              width: 34px;
+              height: 30px;
+              border-radius: 50px;
+              background-clip: padding-box;
+              border: 1px solid @brand-primary;
+              color: @brand-primary;
+              font-size: 15px;
+              line-height: 30px;
+              padding: 0;
+              background: transparent;
+            }
+
+            .jos-steps-flex-item-text{
+              text-align: left;
+              width: 100%;
+              height: auto;
+              font-size: 14px;
+              padding: 5px 0 0 10px;
+              color: @brand-primary;
+            }
+          }
+
+          .jos-steps-flex-item.is--active .jos-steps-flex-item-text{
+            text-align: left;
+            width: 100%;
+            height: auto;
+            font-size: 14px;
+            padding: 5px 0 0 10px;
+            color: @highlight-success;
+          }
+
+          .jos-steps-flex-item.is--active .jos-steps-flex-item-icon{
+            text-align: center;
+            width: 34px;
+            height: 30px;
+            border-radius: 50px;
+            background-clip: padding-box;
+            border: 1px solid @highlight-success;
+            color: white;
+            font-size: 15px;
+            line-height: 30px;
+            padding: 0;
+            background: @highlight-success;
+          }
+        }
+      }
+    }
+  }
+
+
+
+/* 78.75em | Desktop*/
+@media screen and (min-width: @desktopViewportWidth){
+
+
+  .header-main{
+    .steps--container{
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      background: white;
+
+      .container{
+        background: white;
+
+        .jos-steps-flex-container{
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-template-rows: 1fr;
+          gap: 5px 5px;
+          grid-template-areas: ". . . .";
+          align-items: center;
+          width: 100%;
+          padding: 20px 0;
+
+
+          .jos-steps-flex-item {
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-align-content: center;
+            -ms-flex-line-pack: center;
+            align-content: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+
+            .jos-steps-flex-item-icon{
+              text-align: center;
+              width: 34px;
+              height: 30px;
+              border-radius: 50px;
+              background-clip: padding-box;
+              border: 1px solid @brand-primary;
+              color: @brand-primary;
+              font-size: 15px;
+              line-height: 30px;
+              padding: 0;
+              background: transparent;
+            }
+
+            .jos-steps-flex-item-text{
+              text-align: left;
+              width: 100%;
+              height: auto;
+              font-size: 14px;
+              padding: 5px 0 0 10px;
+              color: @brand-primary;
+            }
+          }
+
+          .jos-steps-flex-item.is--active .jos-steps-flex-item-text{
+            text-align: left;
+            width: 100%;
+            height: auto;
+            font-size: 14px;
+            padding: 5px 0 0 10px;
+            color: @highlight-success;
+          }
+
+          .jos-steps-flex-item.is--active .jos-steps-flex-item-icon{
+            text-align: center;
+            width: 34px;
+            height: 30px;
+            border-radius: 50px;
+            background-clip: padding-box;
+            border: 1px solid @highlight-success;
+            color: white;
+            font-size: 15px;
+            line-height: 30px;
+            padding: 0;
+            background: @highlight-success;
+          }
+        }
+      }
+    }
+  }
+
+
+}

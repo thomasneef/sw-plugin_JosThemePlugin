@@ -1,0 +1,113 @@
+/*
+ThemeWare Subshop navigation 03/2018
+====================================
+The `subshop-navigation.less` file contains the `Subshop navigation` styles of ThemeWare.
+*/
+
+& when (@subshop_navigation_show=1) {
+    .tcinn-subshop-navigation {
+        position: relative;
+        height: auto;
+        background-color: @subshop_navigation_bg;
+        overflow: auto;
+    }
+
+    .tcinn-subshop-navigation div {
+        display: block;
+        position: relative;
+        padding: 0 @subshop_navigation_padding_left;
+        margin: 0 auto;
+        margin-top: @subshop_navigation_margin_top;
+    }
+    .layout-boxed .tcinn-subshop-navigation div {
+        max-width: @container_max_width;
+    }
+    .layout-fullwidth-boxed .tcinn-subshop-navigation div {
+        max-width: @container_max_width;
+    }
+    .layout-fullwidth .tcinn-subshop-navigation div {}
+
+    .tcinn-subshop-navigation div ul {
+        display: block;
+        position: relative;
+        height: auto;
+        white-space: nowrap;
+        font-size: 0px;
+        overflow: hidden;
+        overflow-x: auto;
+    }
+    .tcinn-subshop-navigation div ul li {
+        position: relative;
+        list-style-type: none;
+        display: inline-block;
+        .unitize(font-size, @subshop_navigation_font_size);
+        margin-right: @subshop_navigation_padding;
+    }
+    .tcinn-subshop-navigation div ul li:first-of-type { margin-left: 0px !important; }
+    .tcinn-subshop-navigation div ul li:last-of-type { margin-right: 0px !important; }
+    .tcinn-subshop-navigation div ul li a {
+        color: @subshop_navigation_linkfarbe;
+        display: block;
+        font-weight: @subshop_navigation_font_weight;
+        text-transform: @subshop_navigation_caps;
+        position: relative;
+        padding: 10px 15px;
+        background-color: @subshop_navigation_linkfarbe_bg;
+        -webkit-transition: background-color 100ms ease;
+        -moz-transition: background-color 100ms ease;
+        -o-transition: background-color 100ms ease;
+        -ms-transition: background-color 100ms ease;
+        transition: background-color 100ms ease;
+    }
+    .tcinn-subshop-navigation div ul li a strong { 
+        font-weight: @font-bold-weight !important; //bold !important;
+    }
+
+    .tcinn-subshop-navigation.gradiations div ul li:nth-of-type(2) a {
+        background-color: darken(@subshop_navigation_linkfarbe_bg,4%);
+    }
+    .tcinn-subshop-navigation.gradiations div ul li:nth-of-type(3) a {
+        background-color: darken(@subshop_navigation_linkfarbe_bg,8%);
+    }
+    .tcinn-subshop-navigation.gradiations div ul li:nth-of-type(4) a {
+        background-color: darken(@subshop_navigation_linkfarbe_bg,12%);
+    }
+
+    .tcinn-subshop-navigation div ul li a:hover {
+        color: @subshop_navigation_linkfarbe_hover !important;
+        background-color: @subshop_navigation_linkfarbe_hover_bg !important;
+    }
+
+    @media (max-width:767px) {
+        .tcinn-subshop-navigation when not (@subshop_navigation_show_mobil=1) {
+            display: none !important;	
+        }
+    }
+}
+
+
+/* Schriftart anpassen: Subshop-Navigation */
+
+& when (@subshop_navigation_show=1) and (@subshop_navigation_font_family=1) {
+    .tcinn-subshop-navigation li a when (@body_font_family_primary=Standard) {
+        font-family: @font-base-stack; /*"Open Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
+    }
+    .tcinn-subshop-navigation li a when not (@body_font_family_primary=customfont1) and not (@body_font_family_primary=Standard) {
+        font-family: @body_font_family_primary, serif;
+    }
+    .tcinn-subshop-navigation li a when (@body_font_family_primary=customfont1) {
+        font-family: @body_font_family_primary_custom, serif;
+    }
+}
+
+& when (@subshop_navigation_show=1) and (@subshop_navigation_font_family=2) {
+    .tcinn-subshop-navigation li a when (@body_font_family_sekundary=Standard) {
+        font-family: @font-base-stack; /*"Open Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
+    }
+    .tcinn-subshop-navigation li a when not (@body_font_family_sekundary=customfont2) and not (@body_font_family_sekundary=Standard) {
+        font-family: @body_font_family_sekundary, serif;
+    }
+    .tcinn-subshop-navigation li a when (@body_font_family_sekundary=customfont2) {
+        font-family: @body_font_family_sekundary_custom, serif;
+    }
+}

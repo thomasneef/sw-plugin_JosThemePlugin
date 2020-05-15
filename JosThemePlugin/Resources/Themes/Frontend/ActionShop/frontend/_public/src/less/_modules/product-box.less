@@ -1,0 +1,123 @@
+.product--box{
+    
+    padding: 1% 0 0 1%;
+
+    .box--content{
+        background:@listing-actions-bg;
+        .unitize(padding,20);
+    }
+
+    .product--price .price--default {
+        font-size: 16px;
+        font-width: 400;
+        line-height: 1.25rem;
+        margin: 0rem 0.3125rem 0rem 0rem;
+        vertical-align: bottom;
+        float: left;
+    }
+
+    .product--badges{
+
+        .product--badge{
+            border-radius:0;
+            .unitize-padding(5,10,5,10);
+        }
+
+        .badge--newcomer{
+            background:@badge-newcomer-bg;
+        }
+    
+    }
+
+    .product--title{
+        font-weight:400;
+        .unitize(font-size,14);
+        .unitize(height,43);
+    }
+
+    .product--btn-container{
+        .unitize(margin-bottom,10);
+    }
+
+    img{
+        transition: transform .5s;
+    }
+
+    &:hover img{
+        transform: scale(1.05);
+        opacity:0.95;
+    }
+}
+
+.box--minimal{
+
+    width:100%;
+
+    .product--image{
+        .unitize(height,300);
+    }
+
+    .product--price-info{
+        
+        .unitize(height,50);
+
+        .price--unit{
+            .unitize(height,15);
+        }
+
+        .product--price-outer{
+            .unitize(height,20);
+        }
+    }
+
+}
+
+/* 30em | 480px | Phone Landscape*/
+@media screen and (min-width: @phoneLandscapeViewportWidth){
+    
+    .box--minimal {
+        width:50%;
+    }
+
+}
+
+/* 48em | 768px | Tablet*/
+@media screen and (min-width: @tabletViewportWidth){
+    
+    .box--minimal {
+        width:50%;
+    }
+
+}
+
+/* 64em | 1024px | Tablet Landscape*/
+@media screen and (min-width: @tabletLandscapeViewportWidth){
+    
+    .box--minimal {
+        width:33.3%;
+    }
+
+}
+
+/* 78.75em | Desktop*/
+@media screen and (min-width: @desktopViewportWidth){
+    
+    .box--minimal {
+        width:33.3%;
+    }
+
+    .product--box{
+
+        &.box--list
+        {
+            .product--image{
+                .unitize(width,400);
+            }
+
+            .product--info{
+                .unitize-padding(0,0,0,425);
+            }
+        }
+    }
+
+}

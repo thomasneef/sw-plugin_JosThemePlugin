@@ -1,0 +1,198 @@
+/*
+Input Types
+==========================================
+Defines the basic styling of the Shopware input element types.
+*/
+
+::-webkit-input-placeholder {
+    color: #ccc !important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: #ccc !important;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color: #ccc !important;
+}
+
+:-ms-input-placeholder {
+    color: #ccc !important;
+}
+
+label.has--error {
+    color: @highlight-error;
+    background: transparent
+}
+
+
+.badge {
+    padding: 0;
+    height: 16px;
+    min-width: 16px;
+    line-height: 16px;
+    font-size: 11px;
+    border-radius: 50px;
+    box-sizing: content-box;
+    white-space: nowrap;
+    z-index: 500;
+    font-weight: 500;
+    text-align: center;
+    border: 0 none !important;
+}
+
+
+textarea,
+input[type="text"],
+input[type="search"],
+input[type="password"],
+input[type="number"],
+input[type="email"],
+input[type="tel"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    background-clip: padding-box;
+    box-sizing: border-box;
+    line-height: 1.1875rem;
+    font-size: @input-font-size--mobil;
+    width: 18.125rem;
+    padding: .625rem .625rem .5625rem .625rem;
+    box-shadow: none;
+    background: @input-bg;
+    border: 1px solid @input-border;
+    border-top-color: @input-border;
+    color: @input-color;
+    text-align: left;
+}
+
+
+
+
+/*
+textarea,
+input[type="text"],
+input[type="search"],
+input[type="password"],
+input[type="number"],
+input[type="email"],
+input[type="tel"] {
+    color: @input-color;
+
+    .unitize(@tw-mobile-input-font-size, 16, font-size);
+
+    /*&:focus {
+    }*/
+
+    /*&.has--error {
+    }
+}
+*/
+
+
+@media screen and (min-width: @tabletViewportWidth) {
+
+    textarea,
+    input[type="text"],
+    input[type="search"],
+    input[type="password"],
+    input[type="number"],
+    input[type="email"],
+    input[type="tel"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    background-clip: padding-box;
+    box-sizing: border-box;
+    line-height: 1.1875rem;
+    font-size: @input-font-size--mobil;
+    width: 18.125rem;
+    padding: .625rem .625rem .5625rem .625rem;
+    box-shadow: none;
+    background: @input-bg;
+    border: 1px solid @input-border;
+    border-top-color: @input-border;
+    color: @input-color;
+    text-align: left;
+    }
+
+    .content--wrapper .js--fancy-select,
+    .content-main .select-field select,
+    .content-main
+    .js--fancy-select select,
+    .quick-view .select-field select,
+    .quick-view .js--fancy-select select {
+        background-color: @input-bg;
+        background-image: none;
+        color: @input-color !important;
+        border: 1px solid @input-border !important;
+        border-radius: 0px;
+        background-clip: padding-box;
+    }
+
+
+    .select-field select, .js--fancy-select select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        padding: 0rem 2.5rem 0rem .625rem;
+        line-height: 2.5rem;
+        border-radius: 0;
+        background-clip: padding-box;
+        background-color: @input-bg;
+        background-image: none;
+        height: 100%;
+        width: 100%;
+        display: block;
+        cursor: pointer;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: left;
+        border: 1px solid @input-border;
+        color: @brand-primary !important;
+    }
+
+
+}
+
+/*
+Selectfield
+==========================================
+Creates a styled combobox selection for the basic select element.
+*/
+
+.select-field,
+.js--fancy-select {
+    select {
+        .unitize(@tw-mobile-input-font-size, 16, font-size);
+
+        option {
+        }
+    }
+}
+
+@media screen and (min-width: @tabletViewportWidth) {
+    .select-field,
+    .js--fancy-select {
+        select {
+            font-size: inherit;
+
+            option {
+            }
+        }
+    }
+    
+}
+
+/* Show select has error */
+.content-main .select-field select.has--error, 
+.content-main .js--fancy-select select.has--error, 
+.quick-view .select-field select.has--error, 
+.quick-view .js--fancy-select select.has--error {
+    color: @input-error-color !important;
+    border: 1px solid @input-error-border !important;
+    background: @input-error-bg !important;
+}

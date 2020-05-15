@@ -1,0 +1,1 @@
+Ihre Bestellung im {config name=shopName}

@@ -1,0 +1,172 @@
+body{
+    background:@body-bg;
+    /*background:url("../../img/bg-circle-pattern.jpg");*/
+}
+body {
+    font-size: 14px;
+    font-family: Montserrat, "Open Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 400;
+    color: #000000;
+    background: #ffffff;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+h1{
+    color:@brand-primary;
+}
+h1,
+h2,
+h3,
+h4{
+    font-weight:300;
+}
+
+.container{
+    background:none;
+}
+
+.content-main{
+    box-shadow: none;
+    .unitize(margin-top,150);
+}
+
+.content-main.is--fullscreen {
+    box-shadow: none;
+    max-width: none;
+    margin: 0;
+}
+
+.btn.is--small {
+    line-height: 1.75rem;
+    background: transparent;
+    border: 1px solid @brand-primary;
+    color: @brand-primary;
+    font-weight: 500;
+}
+
+.panel--body{
+    background:white;
+}
+
+.panel--title{
+    font-weight:300;
+}
+
+.panel--title.is--underline{
+    border-bottom:none;
+}
+
+.select-field select,
+.js--fancy-select select{
+    background-image:none;
+}
+
+.buybox--button.btn.is--primary,
+.btn.is--primary.button--checkout,
+.product--table .table--actions .btn--checkout-proceed,
+.confirm--content .main--actions .btn,
+.register--action button.register--submit.is--primary,
+.confirm--actions button.btn.is--primary.main--actions {
+    background: @highlight-success !important;
+    color: #fff !important;
+    border: 1px solid @highlight-success !important;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    transition: all ease 0.5s;
+    line-height: 38px;
+    font-weight: 600;
+}
+.buybox--button.btn.is--primary:hover,
+.buybox--button.btn.is--primary:focus,
+.buybox--button.btn.is--primary:active,
+.btn.is--primary.button--checkout:hover,
+.btn.is--primary.button--checkout:focus,
+.btn.is--primary.button--checkout:active
+.product--table .table--actions .btn--checkout-proceed:hover,
+.product--table .table--actions .btn--checkout-proceed:focus,
+.product--table .table--actions .btn--checkout-proceed:active .confirm--content .main--actions .btn:hover,
+.confirm--content .main--actions .btn:focus, .confirm--content .main--actions .btn:active,
+.register--action button.register--submit.is--primary:hover,
+.register--action button.register--submit.is--primary:focus,
+.register--action button.register--submit.is--primary:active,
+.confirm--actions button.btn.is--primary.main--actions:hover,
+.confirm--actions button.btn.is--primary.main--actions:focus,
+.confirm--actions button.btn.is--primary.main--actions:active,
+.product--table .table--actions a.btn--checkout-proceed:hover,
+.confirm--content .main--actions .btn.is--primary:hover {
+    background: @highlight-success-hover !important;
+    color: #eee !important;
+    border: 1px solid @highlight-success !important;
+}
+
+.listing--wrapper .product--box.box--minimal .box--content .product--info,
+.listing--wrapper .product--box.box--image .box--content .product--info,
+.box--minimal .product--price-info .product--price-outer {
+    text-align: center;
+}
+
+
+/* 30em | 480px | Phone Landscape*/
+@media screen and (min-width: @phoneLandscapeViewportWidth){
+
+}
+
+/* 48em | 768px | Tablet*/
+@media screen and (min-width: @tabletViewportWidth){
+
+    .content-main{
+        box-shadow: none;
+        .unitize(margin-top,20);
+    }
+    .content-main.is--fullscreen {
+        box-shadow: none;
+        max-width: none;
+        padding: 0;
+        margin: 0;
+    }
+
+
+}
+
+/* 64em | 1024px | Tablet Landscape*/
+@media screen and (min-width: @tabletLandscapeViewportWidth){
+
+    .content-main{
+        box-shadow: none;
+        .unitize(margin-top,20);
+    }
+
+    .content-main.is--fullscreen {
+        box-shadow: none;
+        max-width: none;
+        padding: 0 0 0 0;
+        margin: 0;
+    }
+
+}
+
+/* 78.75em | Desktop*/
+@media screen and (min-width: @desktopViewportWidth){
+
+    .content-main--inner {
+        padding:0;
+    }
+
+    .content-main{
+        .unitize(margin-top,20);
+    }
+
+    .forms--content,
+    .custom-page--content {
+        .unitize(margin-top,13);
+    }
+
+}

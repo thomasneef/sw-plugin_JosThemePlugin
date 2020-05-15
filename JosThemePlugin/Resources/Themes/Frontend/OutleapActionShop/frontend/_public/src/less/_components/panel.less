@@ -1,0 +1,105 @@
+.panel{
+    box-shadow: none !important;
+    //.material-design-box-shadow();
+    border: 0 none;
+
+    .panel{
+        box-shadow: none !important;
+    }
+
+    &.has--border{
+        border: 0 none;
+    }
+
+    h1.panel--title{
+        font-weight: 600;
+        font-size: 24px;
+        color:@brand-primary;
+    }
+
+    .panel--title{
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
+
+.panel--title {
+    margin: 0 31px;
+    font-size: 1rem;
+    display: block;
+    font-weight: 700;
+    color: #080808;
+}
+.panel--body.is--wide {
+    padding: 1.25rem 31px 1.25rem 31px;
+}
+
+.panel.has--border {
+    border:  0 none;
+}
+
+/* 30em | 480px | Phone Landscape*/
+@media screen and (min-width: @phoneLandscapeViewportWidth){
+
+    .panel--title {
+        margin: 0 54px;
+        font-size: 1rem;
+        display: block;
+        font-weight: 700;
+        color: #080808;
+    }
+    .panel--body.is--wide {
+        padding: 1.25rem 54px 1.25rem 31px;
+    }
+
+}
+
+
+/* 48em | 768px | Tablet*/
+@media screen and (min-width: @tabletViewportWidth) {
+
+    .panel--title {
+        margin: 0;
+        font-size: 1rem;
+        display: block;
+        font-weight: 700;
+        color: #080808;
+    }
+    .panel--body.is--wide {
+        padding: 1.25rem 0 1.25rem 0;
+    }
+
+
+
+}
+
+
+
+
+/* 64em | 1024px | Tablet Landscape*/
+@media screen and (min-width: @tabletLandscapeViewportWidth){
+    .panel{
+        box-shadow: none !important;
+        //.material-design-box-shadow();
+        border: 0 none;
+
+        .panel{
+            box-shadow: none !important;
+        }
+
+        &.has--border{
+            border: 0 none;
+        }
+
+        h1.panel--title{
+            font-weight: 600;
+            font-size: 26px;
+            color:@brand-primary;
+        }
+
+        .panel--title{
+            font-weight: 600;
+            font-size: 24px;
+        }
+    }
+}

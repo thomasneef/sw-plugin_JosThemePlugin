@@ -1,0 +1,56 @@
+/*
+ThemeWare Custom announcement
+====================================
+The `custom-announcement.less` file contains the `Custom announcement` styles of ThemeWare.
+*/
+
+/* Detail */
+
+& when (@custom_announcement_article_show=1) {
+  .product--buybox {
+    .tcinn-custom_announcement {
+      background-color:@custom_announcement_bg_color;
+      border: 1px solid @custom_announcement_border_color;
+      color:@custom_announcement_font_color;
+
+      margin: 20px 0 5px 0;
+      /*margin-top: 20px;*/
+      padding: 10px 15px;
+
+      p:last-child {
+        margin:0px;
+        padding:0px;
+      }
+
+      * { /* overwrite defaults */
+        color: @custom_announcement_font_color;
+      }
+    }
+  }
+}
+
+
+/* Checkout */
+
+& when (@custom_announcement_checkout_show=1) {
+  .confirm--content {
+    .tcinn-custom_announcement {
+      background-color: @custom_announcement_bg_color;
+      border: 1px solid @custom_announcement_border_color;
+      color: @custom_announcement_font_color;
+
+      margin: 5px 0 40px 0;
+      /*margin-bottom: 40px;*/
+      padding: 10px 15px;
+
+      p:last-child {
+        margin:0px;
+        padding:0px;
+      }
+
+      * { /* overwrite defaults */
+        color: @custom_announcement_font_color;
+      }
+    }
+  }
+}
